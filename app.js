@@ -41,7 +41,7 @@ async function getinfo(query, region) {
     controller = new AbortController();
 
     if(!region) region ="";
-    const api = "/api/universities";
+    const api = "pages/api/universities";
     const url = api + "?name=" + encodeURIComponent(query) + "&country=" + encodeURIComponent(region);
     
     try {
@@ -79,3 +79,4 @@ function addData(data) {
     }
 
 }
+
