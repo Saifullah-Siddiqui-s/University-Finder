@@ -41,11 +41,8 @@ async function getinfo(query, region) {
     controller = new AbortController();
 
     if(!region) region ="";
-    const target = "http://universities.hipolabs.com/search?";
-    const api = "https://api.allorigins.win/raw?url="; // proxy service
-    const url = api + encodeURIComponent(
-        target + "name=" + encodeURIComponent(query) + "&country=" + encodeURIComponent(region)
-    );
+    const api = "http://universities.hipolabs.com/search?";
+    const url = api+"name="+encodeURIComponent(query)+"&country="+encodeURIComponent(region);
     
     try {
         apistatus.innerText = "Loading...";
@@ -80,7 +77,4 @@ function addData(data) {
         tr.append(name, country, state, website);
         rows.append(tr);
     }
-
 }
-
-
